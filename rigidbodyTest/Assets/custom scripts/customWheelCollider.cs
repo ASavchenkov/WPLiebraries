@@ -2,20 +2,26 @@
 using System.Collections;
 
 public class customWheelCollider : MonoBehaviour {
-    
+
+    Collision currentCollision;
 	// Use this for initialization
 	void Start () {
 	    
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	    
+	void FixedUpdate () {
+        print("running fake gravity");
+        GetComponent<Rigidbody>().AddForce(-transform.up *(float)9.81, ForceMode.Acceleration);
 	}
     void OnCollisionEnter (Collision col){
-        print("enter called  "+ this.gameObject.name + ":   " + col.impactForceSum + "   " + col.impulse + "   " + col.frictionForceSum);
+        currentCollision = col;
     }
     void OnCollisionStay(Collision col){
-        print(this.gameObject.name + ":   " + col.impactForceSum + "   " + col.impulse + "   " + col.frictionForceSum);
+        currentCollision = col;    
+    }
+    void OnCollisionExit(Collision col)
+    {
+        currentCollision = null;
     }
 }
