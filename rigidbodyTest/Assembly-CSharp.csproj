@@ -48,11 +48,11 @@
      <Compile Include="Assets\JSON\JSONObject.cs" />
      <Compile Include="Assets\JSON\JSONTemplates.cs" />
      <Compile Include="Assets\JSON\VectorTemplates.cs" />
-     <Compile Include="Assets\custom scripts\OnCollision.cs" />
      <Compile Include="Assets\custom scripts\SimpleCarController.cs" />
      <Compile Include="Assets\custom scripts\customWheelCollider.cs" />
      <Compile Include="Assets\custom scripts\fakeGravity.cs" />
      <Compile Include="Assets\custom scripts\test.cs" />
+     <Compile Include="Assets\custom scripts\wheelInfo.cs" />
      <None Include="Assets\JSON\readme.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

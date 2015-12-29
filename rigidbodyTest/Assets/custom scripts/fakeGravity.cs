@@ -9,7 +9,7 @@ public class fakeGravity : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         GetComponent<Rigidbody>().AddForce(-transform.up * G, ForceMode.Acceleration);
     }
 }
