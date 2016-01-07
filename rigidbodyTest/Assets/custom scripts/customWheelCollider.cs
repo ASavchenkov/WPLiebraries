@@ -16,8 +16,8 @@ public class customWheelCollider : MonoBehaviour
 
         //col.contacts[0].thisCollider.GetComponentInChildren<wheelInfo>().COF); // this is the correct way to retrieve wheel info
 
-        float leftTorque = Input.GetAxis("leftTank") * 200;
-        float rightTorque = Input.GetAxis("rightTank") * 200;//get the supposed torques we are meant to apply to each side
+        float leftTorque = Input.GetAxis("leftTank") * 20;
+        float rightTorque = Input.GetAxis("rightTank") * 20;//get the supposed torques we are meant to apply to each side
 
         foreach (KeyValuePair<string, List<Collision>> chainedWheels in collisionDictionary)
         {
@@ -25,9 +25,22 @@ public class customWheelCollider : MonoBehaviour
             foreach(Collision col in wheels)
             {
                 
-                print(parentRB.transform.InverseTransformPoint(col.contacts[0].point).x + "  " + col.contacts[0].thisCollider.transform.parent.name);
                 if(col.contacts[0].thisCollider.transform.parent.name=="leftSide") parentRB.AddForceAtPosition(parentRB.transform.forward*leftTorque,col.contacts[0].point);
                 else if (col.contacts[0].thisCollider.transform.parent.name == "rightSide") parentRB.AddForceAtPosition(parentRB.transform.forward * rightTorque, col.contacts[0].point);
+
+                //START DOING FRICTION
+                float curCOF = col.contacts[0].thisCollider.GetComponent<wheelInfo>().COF;
+                float downForce = col.impulse.y;
+                float wheelSlip = parentRB.transform.InverseTransformDirection(parentRB.GetPointVelocity(col.contacts[0].point)).x;
+                float outputFriction = 0;
+                //start building the friction curve, or in this case set of lines
+                if (wheelSlip > 0.2) outputFriction = downForce*curCOF;
+                else if (wheelSlip < -0.2) outputFriction = -downForce*curCOF;
+                else outputFriction = -downForce*curCOF*wheelSlip*5;
+                print(curCOF + "   " + wheelSlip + "   " + downForce + "   " + outputFriction);
+
+                parentRB.AddForceAtPosition(parentRB.transform.right*outputFriction,col.contacts[0].point);
+                
 
             }
             //            print(col.contacts[0].thisCollider.name);
