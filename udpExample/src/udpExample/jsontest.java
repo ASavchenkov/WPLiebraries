@@ -12,6 +12,11 @@ public class jsontest {
 		JSONArray obj2 = new JSONArray();
 		obj2.add("pneumatic");
 		obj2.add(new Integer(3));
+		
+		double x = Math.sqrt(2);
+		
+		obj2.add(Double.toHexString(x));
+		System.out.println(Double.parseDouble((String)obj2.get(2)));
 		System.out.println(obj2.toJSONString());
 		JSONParser parser = new JSONParser();
 		String out = obj2.toJSONString();
