@@ -4,6 +4,7 @@ using System.Collections;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using FullSerializer;
 
 public class CommunicationModule : MonoBehaviour {
 
@@ -24,19 +25,19 @@ public class CommunicationModule : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    try{
-            print("trying to recieve");
-            data = newSock.Receive(ref sender);
+	        print("trying to recieve");
+	        data = newSock.Receive(ref sender);
+            print("recieved from: " + sender.ToString() + "this stuff: " + Encoding.ASCII.GetString(data));
+            print("sending: " + Encoding.ASCII.GetString(data));
+            newSock.Send(data, data.Length, sender);
         }
-        catch (Exception e){
-            print("timed out: " + e.StackTrace);
-            data = new byte[1];
-        }
-	   
-        
-        print("recieved from: " + sender.ToString()+  "this stuff: " + Encoding.ASCII.GetString(data));
+	    catch (Exception e)
+	    {
+	        print("timed out: " + e.StackTrace);
+	        data = new byte[1];
+	    }
 
-        print("sending: " + Encoding.ASCII.GetString(data));
 
-        newSock.Send(data,data.Length,sender);
+	    
 	}
 }

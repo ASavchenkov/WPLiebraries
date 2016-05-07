@@ -21,7 +21,9 @@ public class IterativeRobot {
 	static Thread comThread;
 	
 	static Gson gson = new Gson();
-	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try {
 			System.out.println("Attempting to take port: ");
@@ -35,7 +37,8 @@ public class IterativeRobot {
 			Map robotHeader = new HashMap();
 			robotHeader.put("variant", "WPLiebraries");
 			robotHeader.put("port",com.getPort());
-
+			
+			
 			String headerString = gson.toJson(robotHeader);
 			
 			

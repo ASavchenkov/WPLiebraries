@@ -12,7 +12,7 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
@@ -58,12 +58,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -79,6 +73,7 @@
     <Compile Include="Assets\JSON\JSONTemplates.cs" />
     <Compile Include="Assets\JSON\VectorTemplates.cs" />
     <Compile Include="Assets\custom scripts\CommunicationModule.cs" />
+    <Compile Include="Assets\custom scripts\FSTesting.cs" />
     <Compile Include="Assets\custom scripts\Joystick.cs" />
     <Compile Include="Assets\custom scripts\SimpleCarController.cs" />
     <Compile Include="Assets\custom scripts\customWheelCollider.cs" />
@@ -86,6 +81,57 @@
     <Compile Include="Assets\custom scripts\shittyWheelCollider.cs" />
     <Compile Include="Assets\custom scripts\test.cs" />
     <Compile Include="Assets\custom scripts\wheelInfo.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\AnimationCurve_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\Bounds_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\GUIStyleState_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\GUIStyle_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\Gradient_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\Keyframe_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\LayerMask_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\RectOffset_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\Unity\Rect_DirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsArrayConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsDateConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsDictionaryConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsEnumConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsForwardConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsGuidConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsIEnumerableConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsKeyValuePairConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsNullableConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsPrimitiveConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsReflectedConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsTypeConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Converters\fsWeakReferenceConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\Internal\fsCyclicReferenceManager.cs" />
+    <Compile Include="Assets\fullserializer\Source\Internal\fsOption.cs" />
+    <Compile Include="Assets\fullserializer\Source\Internal\fsPortableReflection.cs" />
+    <Compile Include="Assets\fullserializer\Source\Internal\fsTypeExtensions.cs" />
+    <Compile Include="Assets\fullserializer\Source\Internal\fsVersionManager.cs" />
+    <Compile Include="Assets\fullserializer\Source\Internal\fsVersionedType.cs" />
+    <Compile Include="Assets\fullserializer\Source\Reflection\fsMetaProperty.cs" />
+    <Compile Include="Assets\fullserializer\Source\Reflection\fsMetaType.cs" />
+    <Compile Include="Assets\fullserializer\Source\Reflection\fsReflectionUtility.cs" />
+    <Compile Include="Assets\fullserializer\Source\Reflection\fsTypeCache.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsAotCompilationManager.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsBaseConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsConfig.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsContext.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsConverterRegistrar.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsData.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsDirectConverter.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsExceptions.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsISerializationCallbacks.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsIgnoreAttribute.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsJsonParser.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsJsonPrinter.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsMemberSerialization.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsObjectAttribute.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsObjectProcessor.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsPropertyAttribute.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsResult.cs" />
+    <Compile Include="Assets\fullserializer\Source\fsSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JSON\readme.txt" />

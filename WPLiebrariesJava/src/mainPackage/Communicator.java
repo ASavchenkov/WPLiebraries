@@ -30,7 +30,8 @@ public class Communicator implements Runnable{
 	//use this map to store all most current data from the sim.
 	
 	
-	/*
+	/**
+	 * @author Aleksandr Savchenkov
 	 * @param _ownPort is the port this app will send data from.
 	 */
 	public Communicator( int _simPort) throws IOException{
@@ -56,7 +57,10 @@ public class Communicator implements Runnable{
 			}
 		}
 	}
-	
+	/**
+	 * @author
+	 * @param msg the string you want to send
+	 */
 	public void sendString(String msg) throws IOException{
 		sendBuf = msg.getBytes();
 		DatagramPacket sendPack = new DatagramPacket(sendBuf,sendBuf.length,simAddr,simPort);
