@@ -60,6 +60,7 @@ public class Communicator implements Runnable{
 	/**
 	 * testing javadocs.
 	 * this javadoc is in the main branch
+	 * this is a second commit to the main branch.
 	 * @author Aleksandr Savchenkov
 	 * @param msg the string you want to send
 	 */
