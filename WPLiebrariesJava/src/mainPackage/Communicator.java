@@ -58,7 +58,8 @@ public class Communicator implements Runnable{
 		}
 	}
 	/**
-	 * @author
+	 * testing javadocs.
+	 * @author Aleksandr Savchenkov
 	 * @param msg the string you want to send
 	 */
 	public void sendString(String msg) throws IOException{
