@@ -1,24 +1,25 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using XInputDotNetPure;
+
 public class customWheelCollider : MonoBehaviour
 { 
 
     Dictionary<string, List<Collision>> collisionDictionary = new Dictionary<string, List<Collision>>();
     Rigidbody parentRB;
-
+    public PlayerIndex idx;
     void Start()
     {
         parentRB = GetComponent<Rigidbody>();
     }
     void FixedUpdate()
     {
-
         //col.contacts[0].thisCollider.GetComponentInChildren<wheelInfo>().COF); // this is the correct way to retrieve wheel info
-
-        float leftTorque = Input.GetAxis("leftTank") * 20;
-        float rightTorque = Input.GetAxis("rightTank") * 20;//get the supposed torques we are meant to apply to each side
-
+        GamePadState state = GamePad.GetState(idx);
+        float leftTorque = state.ThumbSticks.Left.Y * 20;
+        float rightTorque = state.ThumbSticks.Right.Y * 20;//get the supposed torques we are meant to apply to each side
         foreach (KeyValuePair<string, List<Collision>> chainedWheels in collisionDictionary)
         {
             List<Collision> wheels = chainedWheels.Value;
@@ -37,7 +38,7 @@ public class customWheelCollider : MonoBehaviour
                 if (wheelSlip > 0.2) outputFriction = downForce*curCOF;
                 else if (wheelSlip < -0.2) outputFriction = -downForce*curCOF;
                 else outputFriction = -downForce*curCOF*wheelSlip*5;
-                print(curCOF + "   " + wheelSlip + "   " + downForce + "   " + outputFriction);
+                //sprint(curCOF + "   " + wheelSlip + "   " + downForce + "   " + outputFriction);
 
                 parentRB.AddForceAtPosition(parentRB.transform.right*outputFriction,col.contacts[0].point);
                 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/commsScene.unity
+- path: Assets/driveScene.unity
   isLoaded: 1
   isActive: 1

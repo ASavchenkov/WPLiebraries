@@ -61,6 +61,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\UnityPackages\JsonNet\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="XInputDotNetPure">
+      <HintPath>Assets\Plugins\x86_64\XInputDotNetPure.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="rigidbodyTest.CSharp.Plugins.csproj">
@@ -72,9 +78,12 @@
     <Compile Include="Assets\JSON\JSONObject.cs" />
     <Compile Include="Assets\JSON\JSONTemplates.cs" />
     <Compile Include="Assets\JSON\VectorTemplates.cs" />
+    <Compile Include="Assets\UnityPackages\JsonNetSample\JsonNetSample.cs" />
+    <Compile Include="Assets\XInputDotNet\Examples\XInputTestCS.cs" />
     <Compile Include="Assets\custom scripts\CommunicationModule.cs" />
     <Compile Include="Assets\custom scripts\FSTesting.cs" />
     <Compile Include="Assets\custom scripts\Joystick.cs" />
+    <Compile Include="Assets\custom scripts\RobotParts\Motor.cs" />
     <Compile Include="Assets\custom scripts\SimpleCarController.cs" />
     <Compile Include="Assets\custom scripts\customWheelCollider.cs" />
     <Compile Include="Assets\custom scripts\fakeGravity.cs" />
@@ -139,6 +148,7 @@
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\XInputDotNet\MITLicense.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

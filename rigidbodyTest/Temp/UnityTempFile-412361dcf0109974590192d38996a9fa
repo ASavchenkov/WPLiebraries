@@ -1,0 +1,151 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:Assets/Plugins/x86_64/XInputDotNetPure.dll
+-r:Assets/UnityPackages/JsonNet/Newtonsoft.Json.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_3_4
+-define:UNITY_5_3
+-define:UNITY_5
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_SPRITE_POLYGON
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_VR
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:INCLUDE_DIRECTX12
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_LOCALIZATION
+-define:ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
+-define:ENABLE_EDITOR_TESTS_RUNNER
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_LOG_MIXED_STACKTRACE
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:CROSS_PLATFORM_INPUT
+Assets/JSON/JSONObject.cs
+Assets/JSON/JSONTemplates.cs
+Assets/JSON/VectorTemplates.cs
+Assets/UnityPackages/JsonNetSample/JsonNetSample.cs
+Assets/XInputDotNet/Examples/XInputTestCS.cs
+"Assets/custom scripts/CommunicationModule.cs"
+"Assets/custom scripts/FSTesting.cs"
+"Assets/custom scripts/Joystick.cs"
+"Assets/custom scripts/RobotParts/Motor.cs"
+"Assets/custom scripts/SimpleCarController.cs"
+"Assets/custom scripts/customWheelCollider.cs"
+"Assets/custom scripts/fakeGravity.cs"
+"Assets/custom scripts/shittyWheelCollider.cs"
+"Assets/custom scripts/test.cs"
+"Assets/custom scripts/wheelInfo.cs"
+Assets/fullserializer/Source/Converters/Unity/AnimationCurve_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/Bounds_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/GUIStyleState_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/GUIStyle_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/Gradient_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/Keyframe_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/LayerMask_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/RectOffset_DirectConverter.cs
+Assets/fullserializer/Source/Converters/Unity/Rect_DirectConverter.cs
+Assets/fullserializer/Source/Converters/fsArrayConverter.cs
+Assets/fullserializer/Source/Converters/fsDateConverter.cs
+Assets/fullserializer/Source/Converters/fsDictionaryConverter.cs
+Assets/fullserializer/Source/Converters/fsEnumConverter.cs
+Assets/fullserializer/Source/Converters/fsForwardConverter.cs
+Assets/fullserializer/Source/Converters/fsGuidConverter.cs
+Assets/fullserializer/Source/Converters/fsIEnumerableConverter.cs
+Assets/fullserializer/Source/Converters/fsKeyValuePairConverter.cs
+Assets/fullserializer/Source/Converters/fsNullableConverter.cs
+Assets/fullserializer/Source/Converters/fsPrimitiveConverter.cs
+Assets/fullserializer/Source/Converters/fsReflectedConverter.cs
+Assets/fullserializer/Source/Converters/fsTypeConverter.cs
+Assets/fullserializer/Source/Converters/fsWeakReferenceConverter.cs
+Assets/fullserializer/Source/Internal/fsCyclicReferenceManager.cs
+Assets/fullserializer/Source/Internal/fsOption.cs
+Assets/fullserializer/Source/Internal/fsPortableReflection.cs
+Assets/fullserializer/Source/Internal/fsTypeExtensions.cs
+Assets/fullserializer/Source/Internal/fsVersionManager.cs
+Assets/fullserializer/Source/Internal/fsVersionedType.cs
+Assets/fullserializer/Source/Reflection/fsMetaProperty.cs
+Assets/fullserializer/Source/Reflection/fsMetaType.cs
+Assets/fullserializer/Source/Reflection/fsReflectionUtility.cs
+Assets/fullserializer/Source/Reflection/fsTypeCache.cs
+Assets/fullserializer/Source/fsAotCompilationManager.cs
+Assets/fullserializer/Source/fsBaseConverter.cs
+Assets/fullserializer/Source/fsConfig.cs
+Assets/fullserializer/Source/fsContext.cs
+Assets/fullserializer/Source/fsConverter.cs
+Assets/fullserializer/Source/fsConverterRegistrar.cs
+Assets/fullserializer/Source/fsData.cs
+Assets/fullserializer/Source/fsDirectConverter.cs
+Assets/fullserializer/Source/fsExceptions.cs
+Assets/fullserializer/Source/fsISerializationCallbacks.cs
+Assets/fullserializer/Source/fsIgnoreAttribute.cs
+Assets/fullserializer/Source/fsJsonParser.cs
+Assets/fullserializer/Source/fsJsonPrinter.cs
+Assets/fullserializer/Source/fsMemberSerialization.cs
+Assets/fullserializer/Source/fsObjectAttribute.cs
+Assets/fullserializer/Source/fsObjectProcessor.cs
+Assets/fullserializer/Source/fsPropertyAttribute.cs
+Assets/fullserializer/Source/fsResult.cs
+Assets/fullserializer/Source/fsSerializer.cs
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\2.0\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\2.0\System.Xml.Linq.dll"

@@ -46,13 +46,13 @@ public class IterativeRobot {
 				
 				/*
 				 * regardless of state we want to keep updating the 
-				 * header and sending it to the bot every 20 or so ms?
-				 * (50 if theres actual important info in there)	
+				 * header and sending it to the bot every 20 or so ms.
 				 */
 				
 				try {
 					com.sendString(headerString);
-					System.out.println(com.getValue("port"));
+					System.out.println(com.getValue("header"));
+					
 				} catch (IOException e1) {
 					System.out.println("yo having trouble communicating");
 					e1.printStackTrace();
